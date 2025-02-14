@@ -4,23 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midterm TT4 - Simulation</title>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="index.scss">
 </head>
 
 <body>
 
     <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
+        <!-- Sidebar -->
         <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="sidebar-heading border-bottom bg-light">Student Management</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="list.html">List</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="list.html">Student List</a>
             </div>
         </div>
-        <!-- Page content wrapper-->
+
+        <!-- Page content wrapper -->
         <div id="page-content-wrapper">
-            <!-- Top navigation-->
+            <!-- Top navigation -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
@@ -46,18 +48,30 @@
                     </div>
                 </div>
             </nav>
-            <!-- Page content-->
+
+            <!-- Page content -->
             <div id="content" class="container-fluid p-5">
-                <h1 class="mt-4">Simple Sidebar</h1>
-                <p>The starting state of the menu will appear collapsed on smaller screens, and will appear
-                    non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-                <p>
-                    Make sure to keep all page content within the
-                    <code>#page-content-wrapper</code>
-                    . The top navbar is optional, and just for demonstration. Just create an element with the
-                    <code>#sidebarToggle</code>
-                    ID which will toggle the menu when clicked.
-                </p>
+                <h2 class="mt-4 text-center">Edit Student</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="studentCode" class="form-label">Code</label>
+                        <input type="text" class="form-control" id="studentCode" placeholder="Enter student code">
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="Enter student name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentCourse" class="form-label">Course</label>
+                        <input type="text" class="form-control" id="studentCourse" placeholder="Enter student course">
+                    </div>
+                    <div class="mb-3">
+                        <label for="studentDob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="studentDob">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a href="list.html" class="btn btn-secondary">Cancel</a>
+                </form>
             </div>
         </div>
     </div>
